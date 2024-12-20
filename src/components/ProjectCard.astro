@@ -1,15 +1,4 @@
 ---
-interface Props {
-  title: string;
-  category: string;
-  description: string;
-  image: string;
-  client: string;
-  duration: string;
-  technologies: string[];
-  slug: string;
-}
-
 const {
   title,
   category,
@@ -38,7 +27,7 @@ const {
     <p class='text-gray-600 mb-4'>{description}</p>
     <div class='flex flex-wrap gap-2 mb-4'>
       {
-        technologies.map((tech) => (
+        technologies.map((tech: unknown) => (
           <span class='bg-gray-200 text-gray-700 px-2 py-1 rounded-full text-sm'>
             {tech}
           </span>
